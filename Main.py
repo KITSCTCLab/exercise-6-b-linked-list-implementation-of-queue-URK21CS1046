@@ -18,23 +18,23 @@ class Queue:
     else:
       temp = Node(data)
       self.rear.next=temp
-      t.data=data
-      t.next=None
-      self.last=t
+      temp.data=data
+      temp.next=None
+      self.rear=t
       
   def dequeue(self) -> None:
     # Write your code here
     temp =self.head
     if self.head==None:
       return None
-    self.head = t.next
+    self.head = temp.next
     if(self.head == None):
-      self.last = None
+      self.rear = None
       
   def status(self) -> None:
     # Write your code here
     temp=self.head
-    if (self.head == None and self.last == None):
+    if (self.head == None and self.rear == None):
       print("None")
     while(temp != None):
       print(temp.data,end="=>")
