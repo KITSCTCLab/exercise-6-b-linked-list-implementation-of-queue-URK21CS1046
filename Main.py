@@ -20,7 +20,7 @@ class Queue:
       self.rear.next=temp
       temp.data=data
       temp.next=None
-      self.rear=t
+      self.rear=temp
       
   def dequeue(self) -> None:
     # Write your code here
